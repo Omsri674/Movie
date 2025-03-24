@@ -89,7 +89,7 @@ deleteMovie(id: number) {
     return this.moviedataservice.get('movie_name');
   }
 
-  get MovieDirector():any{
+  get MovieDirector(){
     return this.moviedataservice.get('movie_director');
   }
 
