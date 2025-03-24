@@ -7,9 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MovieDataService {
-  get(arg0: string) {
-    throw new Error('Method not implemented.');
+  get(movieId: number) {
+    return this.http.get(this.baseUrl+'get/'+movieId);
   }
+ 
 
   private baseUrl: string;
 
@@ -38,5 +39,6 @@ export class MovieDataService {
       return this.http.put(this.baseUrl+'edit/'+id,mov);
     }
 
+    
   
 }

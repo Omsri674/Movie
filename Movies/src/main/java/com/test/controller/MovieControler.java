@@ -29,12 +29,12 @@ public class MovieControler {
 	@Autowired
 	MovieService movieService;
 	
-	@GetMapping("/listall")
+	@GetMapping("/get/{id}")
 	public Optional<Movies> getMovie(@PathVariable int id) {
 		return movieService.getMovie(id);
 	}
 	
-	@GetMapping("/listall/{id}")
+	@GetMapping("/listall")
 	public List<Movies> getAllMovies() {
 		return movieService.getAllMovies();
 	}
