@@ -1,0 +1,25 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Movie Name</th>
+            <th scope="col">Movie Director</th>
+            <th scope="col"> Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movie of movies">
+            <td>{{ movie.movie_id }}</td>
+            <td>{{ movie.movie_name }}</td>
+            <td>{{ movie.movie_director }}</td>
+            <td><button (click)="deleteMovie(movie.movie_id)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button>
+                <button (click)="updateMovie(this.movie.movie_id,this.movie)" class='btn btn-info'
+                data-toggle="modal" data-target="#myModal">Update</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
